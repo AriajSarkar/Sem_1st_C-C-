@@ -1,0 +1,53 @@
+START
+    INPUT num
+    Initialize temp as an empty list or string
+    Initialize index to 0
+
+    WHILE num != 0
+        Extract the last digit of num (digit = num % 10)
+        Convert digit to character (or store it as a string)
+        Store it in temp at position index
+        Increment index
+        Remove the last digit from num (num = num / 10)
+    END WHILE
+
+    Manipulate digits if necessary (e.g., sum digits)
+
+    IF manipulation done
+        PRINT sum of digits (or any other manipulation result)
+
+    PRINT "Reversed Number: "
+    FOR i FROM index-1 DOWN TO 0
+        PRINT temp[i]
+    END FOR
+
+END
+
+
+----------------------------------
+
+Walkthrough:
+Let’s assume the input is num = 1234.
+
+Step 1: Initialize temp = "" and index = 0.
+Step 2: Start extracting digits:
+num = 1234, last digit is 4, temp = "4", index = 1, num = 123.
+num = 123, last digit is 3, temp = "43", index = 2, num = 12.
+num = 12, last digit is 2, temp = "432", index = 3, num = 1.
+num = 1, last digit is 1, temp = "4321", index = 4, num = 0.
+Step 3: Manipulate if necessary (e.g., sum the digits 4 + 3 + 2 + 1 = 10).
+Step 4: Print any manipulated result (if applicable, print 10).
+Step 5: Print the reversed digits:
+Start printing from temp[index-1] to temp[0]: 1 2 3 4.
+Output: Reversed Number: 4321.
+
+
+
+------------------------------
+
+
+Advantages of This Approach:
+Flexibility: You can easily manipulate the digits (e.g., sum, check conditions) before printing, without storing them permanently.
+Efficient Use of Temporary Storage: You’re only storing the digits temporarily, which avoids memory overhead from large arrays.
+Simplicity: The algorithm is simple and avoids unnecessary complexity while still giving you flexibility when needed.
+This approach is efficient and provides the flexibility you need without unnecessary storage of digits.
