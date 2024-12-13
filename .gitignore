@@ -1,5 +1,14 @@
+# Sample Code
 basic.c
+
+# Test Folders
+trash
+
+# Executables
 a.exe
+basic.exe
 **/a.exe
+
+# Visual Studio Code User Settings
 .vs/
 .vscode/
